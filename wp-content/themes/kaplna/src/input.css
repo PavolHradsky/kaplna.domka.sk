@@ -1,0 +1,12 @@
+/*
+Theme Name: Kaplna Domka
+Text Domain: kaplnadomka
+Version: 1.0
+Description: Theme for kaplna.domka.sk
+Author: Pavol Hradsky
+Author URI: https://github.com/PavolHradsky
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
