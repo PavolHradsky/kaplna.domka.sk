@@ -8,7 +8,7 @@
     <title>Kaplna</title>
 </head>
 <body class="min-h-screen">
-    <div class="sticky top-0">
+    <div class="sticky top-0 z-50">
         <header class="flex bg-[#85A392] p-3 gap-5 items-center justify-between">
             <div class="hamburger flex flex-col gap-1 cursor-pointer p-3 group">
                 <div class="line h-1 w-6 bg-[#FDD998] group-hover:bg-[#F5B971] rounded-full"></div>
@@ -16,7 +16,7 @@
                 <div class="line h-1 w-6 bg-[#FDD998] group-hover:bg-[#F5B971] rounded-full"></div>
             </div>
             <h3 class="text-white text-xl text-center">„S každým sa zhováraj tak, aby si sa stal jeho priateľom.“<span class="text-sm">don&#160Bosco</span></h3>
-            <a href="<?php echo get_home_url() ?>"><img src="<?php echo wp_get_attachment_image_url(10) ?>" alt="logo kaplna" class="w-14 h-14"></a>
+            <a href="<?php echo get_home_url() ?>"><img src="<?php echo wp_get_attachment_image_url(24) ?>" alt="logo kaplna" class="w-14 h-14"></a>
         </header>
         <nav class="bg-[#85A392] absolute h-screen p-3 hidden"> <!--min-w-full-->
             <ul class="text-gray-800 text-xl capitalize flex flex-col gap-3">

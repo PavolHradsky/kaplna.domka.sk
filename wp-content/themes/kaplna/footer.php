@@ -1,5 +1,6 @@
     </div>
-    <footer class="absolute w-full bottom-0">
+    <!-- <footer class="absolute w-full bottom-0"> -->
+    <footer class="w-full">
         <div class="upper-footer bg-[#FDD998] p-10 flex justify-center gap-10">
             <p>footer</p>
             <p>footer</p>
