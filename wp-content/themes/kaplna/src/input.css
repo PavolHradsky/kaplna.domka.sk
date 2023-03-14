@@ -10,3 +10,28 @@ Author URI: https://github.com/PavolHradsky
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .item.active {
+        /* @apply grow bg-gradient-to-b from-half-black-transparent via-transparent; */
+        @apply grow bg-gradient-to-b from-half-black-transparent via-transparent;
+    }
+    .item.inactive {
+        @apply w-full h-24 md:h-auto md:w-24 cursor-pointer;
+    }
+    .item.active .inner-content {
+        @apply flex;
+    }
+    .item.inactive .inner-content {
+        @apply hidden;
+    }
+    .item.inactive .wrapper {
+        @apply h-full w-full bg-half-white-transparrent;
+    }
+    .item.active .title {
+        @apply text-white py-10 mb-20 md:mb-0;
+    }
+    .item.inactive .title {
+        @apply md:rotate-90 md:translate-x-1/2 md:whitespace-nowrap;
+    }
+}

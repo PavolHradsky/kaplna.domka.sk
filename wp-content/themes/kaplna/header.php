@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet">
     <title>Kaplna</title>
 </head>
-<body class="min-h-screen">
+<body class="min-h-screen font-inika">
     <div class="sticky top-0 z-50">
         <header class="flex bg-[#85A392] p-3 gap-5 items-center justify-between">
             <div class="hamburger flex flex-col gap-1 cursor-pointer p-3 group">
