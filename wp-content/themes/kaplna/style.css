@@ -531,6 +531,7 @@ video {
 }
 
 .item.active {
+  height: 40rem;
   flex-grow: 1;
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
   --tw-gradient-from: rgba(0, 0, 0, 0.5);
@@ -539,13 +540,26 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to);
 }
 
+@media (min-width: 768px) {
+  .item.active {
+    height: auto;
+  }
+}
+
 .\!item.active {
+  height: 40rem;
   flex-grow: 1;
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
   --tw-gradient-from: rgba(0, 0, 0, 0.5);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   --tw-gradient-to: rgb(0 0 0 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to);
+}
+
+@media (min-width: 768px) {
+  .\!item.active {
+    height: auto;
+  }
 }
 
 .item.inactive {
@@ -572,6 +586,14 @@ video {
     height: auto;
     width: 6rem;
   }
+}
+
+.item.inactive {
+  /* @apply h-24 md:h-auto cursor-pointer; */
+}
+
+.\!item.inactive {
+  /* @apply h-24 md:h-auto cursor-pointer; */
 }
 
 .item.active .inner-content {
@@ -703,6 +725,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-24 {
+  height: 6rem;
 }
 
 .h-\[30rem\] {

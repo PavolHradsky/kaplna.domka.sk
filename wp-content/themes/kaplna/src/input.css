@@ -14,10 +14,11 @@ Author URI: https://github.com/PavolHradsky
 @layer components {
     .item.active {
         /* @apply grow bg-gradient-to-b from-half-black-transparent via-transparent; */
-        @apply grow bg-gradient-to-b from-half-black-transparent via-transparent;
+        @apply grow h-[40rem] md:h-auto bg-gradient-to-b from-half-black-transparent via-transparent;
     }
     .item.inactive {
         @apply w-full h-24 md:h-auto md:w-24 cursor-pointer;
+        /* @apply h-24 md:h-auto cursor-pointer; */
     }
     .item.active .inner-content {
         @apply flex;

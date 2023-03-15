@@ -21,6 +21,10 @@
                 </div>
             </div>
 
+            <!-- <div class="<?php echo ($count == 0 ? 'active' : 'inactive') ?> item h-24 w-full bg-orange-400 transition-all duration-300">
+
+            </div> -->
+
         <?php $count++;
         } ?>
 
