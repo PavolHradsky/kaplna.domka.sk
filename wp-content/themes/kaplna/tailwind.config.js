@@ -8,7 +8,7 @@ module.exports = {
         'half-black-transparent': 'rgba(0, 0, 0, 0.5)',
       },
       fontFamily: {
-        'inika': ['Inika', 'serif'],
+        'eczar': ['Eczar', 'serif'],
       }
     },
   },

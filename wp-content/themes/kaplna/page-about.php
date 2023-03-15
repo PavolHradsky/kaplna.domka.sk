@@ -1,10 +1,11 @@
 <?php get_header(); ?>
 
+<h1 class="text-4xl text-center p-2 my-8">O nas</h1>
 <div class="content w-full md:h-full md:min-h-[80vh] flex flex-col md:flex-row gap-1">
     
 
     <?php 
-        $args = array('category_name' => 'o-nas', 'order' => 'ASC');
+        $args = array('category_name' => 'o-nas', 'order' => 'ASC', 'posts_per_page' => 10);
         $posts = get_posts( $args );
         $count = 0;
         foreach ($posts as $post) { ?>
@@ -20,10 +21,6 @@
                     <a href="<?php the_permalink(); ?>" class="bg-[#FDD998] px-3 py-1 rounded-md">Citaj dalej</a>
                 </div>
             </div>
-
-            <!-- <div class="<?php echo ($count == 0 ? 'active' : 'inactive') ?> item h-24 w-full bg-orange-400 transition-all duration-300">
-
-            </div> -->
 
         <?php $count++;
         } ?>

@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet">
-    <title>Kaplna</title>
+    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Kaplna Domka</title>
 </head>
-<body class="min-h-screen font-inika">
+<body class="min-h-screen font-eczar">
     <div class="sticky top-0 z-50">
         <header class="flex bg-[#85A392] p-3 gap-5 items-center justify-between">
             <div class="hamburger flex flex-col gap-1 cursor-pointer p-3 group">
@@ -21,14 +21,20 @@
             <h3 class="text-white text-xl text-center grow">„S každým sa zhováraj tak, aby si sa stal jeho priateľom.“<span class="text-sm">don&#160Bosco</span></h3>
             <a class="h-14 aspect-square" href="<?php echo get_home_url() ?>"><img src="<?php echo wp_get_attachment_image_url(24) ?>" alt="logo kaplna"></a>
         </header>
-        <nav class="bg-[#85A392] absolute h-screen p-3 hidden w-full sm:w-1/2"> <!--min-w-full-->
-            <ul class="text-gray-800 text-xl capitalize flex flex-col gap-3">
+        <nav class="bg-[#85A392] absolute h-[calc(100vh-3.5rem)] p-3 hidden px-6">
+            <ul class="text-gray-800 text-2xl capitalize flex flex-col gap-3">
             <?php
-            // Get wordpress menu and do a custom output
-            $getMenu = wp_get_nav_menu_items( 'Navigation'); // Where menu1 can be ID, slug or title
+            
+            $getMenu = wp_get_nav_menu_items( 'Navigation');
+            $count = count($getMenu);
+            $i = 0;
             foreach($getMenu as $item){
-                echo '<a href="' . $item->url . '"><li class="bg-[#FDD998] px-3 py-1 rounded-lg hover:bg-[#F5B971] max-w-xl">' . $item->title . '</li></a>';
-                // echo '<li><a href="' . $item->url . '">' . $item->title . '</a></li>';
+                if( $i < $count-2 ) {
+                    echo '<a href="' . $item->url . '"><li class="text-[#FDD998] px-3 rounded-lg hover:text-[#F5B971] max-w-xl">' . $item->title . '</li></a>';
+                } else {
+                    echo '<a href="' . $item->url . '"><li class="bg-[#FDD998] text-[#DF3636] text-center mx-6 px-3 rounded-lg hover:bg-[#F5B971] max-w-xl">' . $item->title . '</li></a>';
+                }
+                $i++;
             }
             ?>
             </ul>
