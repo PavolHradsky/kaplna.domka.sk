@@ -1,29 +1,16 @@
 <?php get_header(); ?>
-<div class="content flex flex-col lg:max-w-3xl mx-10 lg:mx-auto py-10">
-    <div class="posts flex flex-col gap-4">
-        <h1>Home</h1>
-        <?php 
-        if ( have_posts() ) {
-            while ( have_posts() ) {
-                the_post( );
-                ?>
+<?php get_header(); ?>
+<div class="content flex w-full justify-center">
+    <img class="left-img w-24 xl:w-1/6 h-screen fixed object-cover left-0 -z-10" src="<?php echo wp_get_attachment_url( get_post_meta(get_page_by_path("home")->ID)["img-left"][0] ); ?>"></img>
+    <img class="right-img w-24 xl:w-1/6 h-screen fixed object-cover right-0 -z-10 hidden md:block" src="<?php echo wp_get_attachment_url( get_post_meta(get_page_by_path("home")->ID)["img-right"][0] ); ?>"></img>
 
-                <div class="post-container rounded-lg border-[#85A392] border-4 p-3 flex">
-                    <div class="post-content">
-                        <h2 class="text-2xl text-[#333333]"><?php the_title(); ?></h2>
-                        <p class="mb-4 text-[#333333]"><?php echo get_the_excerpt( ); ?></p>
-                        <a class="p-2 bg-[#FDD998] hover:bg-[#F5B971] text-[#333333] w-auto rounded-lg" href="<?php the_permalink( ); ?>">Citaj dalej</a>
-                    </div>
-                    <img class="rounded-lg max-w-[10rem] object-cover ml-8" src="<?php the_post_thumbnail_url($size = 'post-thumbnail'); ?>" alt="<?php the_post_thumbnail_caption(); ?>">
-                </div>
-                
-                <?php
-            } // end while
-        } // end if
-        ?>
-        <div class="nav-previous alignleft"><?php next_posts_link( 'next' ); ?></div>
+    <div class="inner-content w-full max-w-4xl ml-24 md:mx-24 p-4 flex flex-col items-center">
+        <h1 class="text-center text-4xl p-2 my-8"><?php the_title(""); ?></h1>
+        <div class="divider w-full h-[1px] max-w-2xl bg-black mb-4"></div>
+        
 
-        <div class="nav-next alignright"><?php previous_posts_link( 'prev' ); ?></div>
     </div>
+
 </div>
+<?php get_footer(); ?>
 <?php get_footer(); ?>

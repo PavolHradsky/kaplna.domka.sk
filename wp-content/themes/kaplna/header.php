@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Kaplna Domka</title>
 </head>
-<body class="min-h-screen font-eczar">
+<body class="min-h-screen font-eczar relative pb-40">
     <div class="sticky top-0 z-50">
         <header class="flex bg-[#85A392] p-3 gap-5 items-center justify-between">
             <div class="hamburger flex flex-col gap-1 cursor-pointer p-3 group">
