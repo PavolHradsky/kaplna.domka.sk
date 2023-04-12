@@ -19,7 +19,7 @@
                 <div class="line h-1 w-6 bg-[#FDD998] group-hover:bg-[#F5B971] rounded-full"></div>
             </div>
             <h3 class="text-white text-xl text-center grow">„S každým sa zhováraj tak, aby si sa stal jeho priateľom.“<span class="text-sm">don&#160Bosco</span></h3>
-            <a class="h-14 aspect-square" href="<?php echo get_home_url() ?>"><img src="<?php echo wp_get_attachment_image_url(24) ?>" alt="logo kaplna"></a>
+            <a class="h-14 aspect-square" href="<?php echo get_home_url() ?>"><img src="<?php echo wp_get_attachment_image_url(125) ?>" alt="logo kaplna"></a>
         </header>
         <nav class="bg-[#85A392] absolute h-[calc(100vh-3.5rem)] p-3 hidden px-6">
             <ul class="text-gray-800 text-2xl capitalize flex flex-col gap-3">
