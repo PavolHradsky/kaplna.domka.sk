@@ -6,7 +6,63 @@
 
     <div class="inner-content max-w-4xl ml-24 md:mx-24 p-4 flex flex-col items-center">
         <h1 class="text-center text-4xl p-2 my-8"><?php the_title(""); ?></h1>
-        <?php the_content(  ) ?>
+        <div class="divider w-full h-[1px] max-w-2xl bg-black mb-4"></div>
+
+        <div class='card border-4 border-[#85A392] bg-[#85A392] text-white rounded-xl p-4 flex gap-4 mb-4'>
+            <img class="rounded-full" src="https://picsum.photos/200">
+            <div class="content flex flex-col h-full justify-between">
+                <div class="first">
+                    <h4 class="text-lg">Predseda strediska</h4>
+                    <h3 class="text-2xl">Bruno Sagan</h3>
+                </div>
+                <div class="second">
+                    <p class="text-lg">email: example@example.example</p>
+                    <p class="text-lg">tel: 0969420669</p>
+                </div>
+            </div>
+        </div>
+
+        <div class='card border-[#85A392] rounded-xl p-4 flex flex-row-reverse text-right gap-4 mb-4'>
+            <img class="rounded-full" src="https://picsum.photos/200">
+            <div class="content flex flex-col h-full justify-between">
+                <div class="first">
+                    <h4 class="text-lg">Predseda strediska</h4>
+                    <h3 class="text-2xl">Bruno Sagan</h3>
+                </div>
+                <div class="second">
+                    <p class="text-lg">email: example@example.example</p>
+                    <p class="text-lg">tel: 0969420669</p>
+                </div>
+            </div>
+        </div>
+
+        <div class='card border-4 border-[#85A392] bg-[#85A392] text-white rounded-xl p-4 flex gap-4 mb-4'>
+            <img class="rounded-full" src="https://picsum.photos/200">
+            <div class="content flex flex-col h-full justify-between">
+                <div class="first">
+                    <h4 class="text-lg">Predseda strediska</h4>
+                    <h3 class="text-2xl">Bruno Sagan</h3>
+                </div>
+                <div class="second">
+                    <p class="text-lg">email: example@example.example</p>
+                    <p class="text-lg">tel: 0969420669</p>
+                </div>
+            </div>
+        </div>
+
+        <div class='card border-[#85A392] rounded-xl p-4 flex flex-row-reverse text-right gap-4 mb-4'>
+            <img class="rounded-full" src="https://picsum.photos/200">
+            <div class="content flex flex-col h-full justify-between">
+                <div class="first">
+                    <h4 class="text-lg">Predseda strediska</h4>
+                    <h3 class="text-2xl">Bruno Sagan</h3>
+                </div>
+                <div class="second">
+                    <p class="text-lg">email: example@example.example</p>
+                    <p class="text-lg">tel: 0969420669</p>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>

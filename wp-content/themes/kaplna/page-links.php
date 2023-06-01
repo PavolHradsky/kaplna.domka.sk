@@ -6,7 +6,41 @@
 
     <div class="inner-content max-w-4xl ml-24 md:mx-24 p-4 flex flex-col items-center">
         <h1 class="text-center text-4xl p-2 my-8"><?php the_title(""); ?></h1>
-        <?php the_content(  ) ?>
+        <div class="divider w-full h-[1px] max-w-2xl bg-black mb-8"></div>
+        
+        <div class="flex gap-4 items-center mb-4">
+            <a class='bg-[#FDD998] px-3 py-1 rounded-md' href='#'>Domka</a>
+            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+        </div>
+        <div class="flex flex-row-reverse gap-4 items-center mb-4">
+            <a class='bg-[#FDD998] px-3 py-1 rounded-md' href='#'>Domka</a>
+            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+        </div>
+        <div class="flex gap-4 items-center mb-4">
+            <a class='bg-[#FDD998] px-3 py-1 rounded-md' href='#'>Domka</a>
+            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+        </div>
+        <div class="flex flex-row-reverse gap-4 items-center mb-4">
+            <a class='bg-[#FDD998] px-3 py-1 rounded-md' href='#'>Domka</a>
+            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+        </div>
+        <div class="flex gap-4 items-center mb-4">
+            <a class='bg-[#FDD998] px-3 py-1 rounded-md' href='#'>Domka</a>
+            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+        </div>
+        <div class="flex flex-row-reverse gap-4 items-center mb-4">
+            <a class='bg-[#FDD998] px-3 py-1 rounded-md' href='#'>Domka</a>
+            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+        </div>
+        <div class="flex gap-4 items-center mb-4">
+            <a class='bg-[#FDD998] px-3 py-1 rounded-md' href='#'>Domka</a>
+            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+        </div>
+        <div class="flex flex-row-reverse gap-4 items-center mb-4">
+            <a class='bg-[#FDD998] px-3 py-1 rounded-md' href='#'>Domka</a>
+            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+        </div>
+        
     </div>
 
 </div>
