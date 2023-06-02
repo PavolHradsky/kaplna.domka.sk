@@ -11,7 +11,7 @@
     <title>Kaplna Domka</title>
 </head>
 <body class="min-h-screen font-eczar relative pb-40">
-    <div class="sticky top-0 z-50">
+    <div class="sticky top-0 z-20">
         <header class="flex bg-[#85A392] p-3 gap-5 items-center justify-between">
             <div class="hamburger flex flex-col gap-1 cursor-pointer p-3 group">
                 <div class="line h-1 w-6 bg-[#FDD998] group-hover:bg-[#F5B971] rounded-full"></div>
