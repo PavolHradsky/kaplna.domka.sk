@@ -17,7 +17,7 @@
                 <div class="w-10 h-1 rounded-sm bg-white -rotate-45 origin-left"></div>
                 <div class="w-10 h-1 rounded-sm bg-white rotate-45 origin-left mt-[-0.3rem] "></div>
             </div>
-            <img class="w-10/12" id="main-img" src="" alt="">
+            <img class="w-10/12" id="main-img" src="<?php echo wp_get_attachment_image_url(157) ?>" alt="">
             <div class="next flex flex-col justify-center h-20 cursor-pointer w-1/12">
                 <div class="w-10 h-1 rounded-sm bg-white -rotate-45 origin-right mb-[-0.2rem]"></div>
                 <div class="w-10 h-1 rounded-sm bg-white rotate-45 origin-right"></div>
@@ -55,41 +55,7 @@
                 <?php
 
             }
-            $folders = Tree::getFolders( null );
-
-            foreach ($folders as $folder) {
-                $folder_id = $folder["id"];
-                $folder_name = $folder["text"];
-                $image_id = Helpers::getAttachmentIdsByFolderId( $folder_id )[0];
-                $image_url = wp_get_attachment_image_src($image_id)[0];
-                ?>
-
-                    <div id="<?php echo $folder_id ?>" class="gallery-item flex flex-col border-4 border-[#85A392] text-center">
-                        <h3 class="text-2xl "><?php echo $folder_name; ?></h3>
-                        <img src="<?php echo $image_url; ?>" alt="<?php echo $folder_name; ?>">
-                    </div>
-
-                <?php
-
-            }
-            $folders = Tree::getFolders( null );
-
-            foreach ($folders as $folder) {
-                $folder_id = $folder["id"];
-                $folder_name = $folder["text"];
-                $image_id = Helpers::getAttachmentIdsByFolderId( $folder_id )[0];
-                $image_url = wp_get_attachment_image_src($image_id)[0];
-                ?>
-
-                    <div id="<?php echo $folder_id ?>" class="gallery-item flex flex-col border-4 border-[#85A392] text-center">
-                        <h3 class="text-2xl "><?php echo $folder_name; ?></h3>
-                        <img src="<?php echo $image_url; ?>" alt="<?php echo $folder_name; ?>">
-                    </div>
-
-                <?php
-
-            }
-
+            
             ?>
         </div>
 
@@ -103,6 +69,7 @@
     const overlay = document.querySelector(".overlay")
     const hideBtn = document.querySelector(".hide-btn")
     const mainImg = overlay.querySelector("#main-img")
+    const placeholderImageUrl = mainImg.src
     let imageCounter = overlay.querySelector(".image-counter")
     let thumbnails = overlay.querySelector(".thumbnails")
     let imagesIds = []
@@ -112,7 +79,7 @@
         if(!overlay.classList.contains("hidden")) {
             overlay.classList.add("hidden")
         }
-        mainImg.src = ""
+        mainImg.src = placeholderImageUrl
         thumbnails.innerHTML = ""
         counter = 0
         imagesUrls = []
@@ -142,18 +109,31 @@
                 imagesIds = data.data.attachment_ids
                 imageCounter.innerHTML = `1/${imagesIds.length}`
 
+                imagesIds.forEach(()=>{
+                    let tmpImg = document.createElement("img")
+                    tmpImg.src = placeholderImageUrl
+                    tmpImg.className = "h-14 cursor-pointer"
+                    thumbnails.appendChild(tmpImg)
+                })
+
                 response = await fetch(`https://kaplna.domka.local/wp-json/wp/v2/media/${imagesIds[counter]}`)
                 data = await response.json() 
                 mainImg.src = data.source_url
 
+                let i = 0
                 imagesIds.forEach(async imageId => {
+                    const myI = i
+                    i++
+                    let img
+                    if(thumbnails.childNodes.length > imagesIds.length){
+                        img = thumbnails.childNodes[myI+1]
+                    } else {
+                        img = thumbnails.childNodes[myI]
+                    }
                     response = await fetch(`https://kaplna.domka.local/wp-json/wp/v2/media/${imageId}`)
                     data = await response.json() 
-                    let img = document.createElement("img")
                     img.src = data.source_url
-                    imagesUrls.push(data.source_url)
-                    img.className = "h-14 cursor-pointer"
-                    thumbnails.appendChild(img)
+                    imagesUrls[myI] = data.source_url
                     img.addEventListener("click", ()=>{
                         mainImg.src = img.src
                         counter = imagesUrls.indexOf(mainImg.src)
