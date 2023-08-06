@@ -18,7 +18,7 @@
                 </div>
                 <div class="inner-content flex-col gap-6 items-center bg-half-white-transparrent w-full p-6 text-center">
                     <p class="md:max-w-[20rem] lg:max-w-[30rem] xl:max-w-[40rem]"><?php echo get_the_excerpt(); ?></p>
-                    <a href="<?php the_permalink(); ?>" class="bg-[#FDD998] px-3 py-1 rounded-md">Citaj dalej</a>
+                    <a href="<?php the_permalink(); ?>" class="bg-secondary px-3 py-1 rounded-md">Citaj dalej</a>
                 </div>
             </div>
 
@@ -46,7 +46,7 @@
                 </div>
                 <div class="inner-content flex-col gap-6 items-center bg-half-white-transparrent w-full p-6 text-center">
                     <p class="md:max-w-[20rem] lg:max-w-[30rem] xl:max-w-[40rem]"><?php echo get_the_excerpt(); ?></p>
-                    <a href="<?php the_permalink(); ?>" class="bg-[#FDD998] px-3 py-1 rounded-md">Citaj dalej</a>
+                    <a href="<?php the_permalink(); ?>" class="bg-secondary px-3 py-1 rounded-md">Citaj dalej</a>
                 </div>
             </div>
 
@@ -74,7 +74,7 @@
                 </div>
                 <div class="inner-content flex-col gap-6 items-center bg-half-white-transparrent w-full p-6 text-center">
                     <p class="md:max-w-[20rem] lg:max-w-[30rem] xl:max-w-[40rem]"><?php echo get_the_excerpt(); ?></p>
-                    <a href="<?php the_permalink(); ?>" class="bg-[#FDD998] px-3 py-1 rounded-md">Citaj dalej</a>
+                    <a href="<?php the_permalink(); ?>" class="bg-secondary px-3 py-1 rounded-md">Citaj dalej</a>
                 </div>
             </div>
 

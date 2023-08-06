@@ -5,10 +5,9 @@
     <img class="right-img w-24 xl:w-[14%] 2xl:w-1/5 h-screen fixed object-cover right-0 -z-10 hidden md:block" src="<?php echo wp_get_attachment_url( get_post_meta(get_page_by_path("news")->ID)["img-right"][0] ); ?>"></img>
 
     <div class="inner-content max-w-4xl ml-24 md:mx-24 p-4 flex flex-col items-center">
-        <h1 class="text-center text-4xl p-2 my-8"><?php the_title(""); ?></h1>
-        <div class="divider w-full h-[1px] max-w-2xl bg-black mb-4"></div>
+        <h1 class="text-center text-4xl p-2 my-2 bg-secondary w-full py-6"><?php the_title(""); ?></h1>
 
-        <div class='card border-4 border-[#85A392] bg-[#85A392] text-white rounded-xl p-4 flex gap-4 mb-4'>
+        <div class='card border-4 border-primary bg-primary text-white p-4 flex gap-4 mb-4'>
             <img class="rounded-full" src="https://picsum.photos/200">
             <div class="content flex flex-col h-full justify-between">
                 <div class="first">
@@ -22,7 +21,7 @@
             </div>
         </div>
 
-        <div class='card border-[#85A392] rounded-xl p-4 flex flex-row-reverse text-right gap-4 mb-4'>
+        <div class='card border-primary p-4 flex flex-row-reverse text-right gap-4 mb-4'>
             <img class="rounded-full" src="https://picsum.photos/200">
             <div class="content flex flex-col h-full justify-between">
                 <div class="first">
@@ -36,7 +35,7 @@
             </div>
         </div>
 
-        <div class='card border-4 border-[#85A392] bg-[#85A392] text-white rounded-xl p-4 flex gap-4 mb-4'>
+        <div class='card border-4 border-primary bg-primary text-white p-4 flex gap-4 mb-4'>
             <img class="rounded-full" src="https://picsum.photos/200">
             <div class="content flex flex-col h-full justify-between">
                 <div class="first">
@@ -50,7 +49,7 @@
             </div>
         </div>
 
-        <div class='card border-[#85A392] rounded-xl p-4 flex flex-row-reverse text-right gap-4 mb-4'>
+        <div class='card border-primary p-4 flex flex-row-reverse text-right gap-4 mb-4'>
             <img class="rounded-full" src="https://picsum.photos/200">
             <div class="content flex flex-col h-full justify-between">
                 <div class="first">

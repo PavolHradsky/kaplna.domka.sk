@@ -19,11 +19,11 @@
             $title = get_the_title();
             $excerpt = get_the_excerpt();
             $permalink = get_the_permalink();
-            $bg = rand(0, 1) ? "bg-[#85A392]" : "";
-            $template = "<div class='card border-4 border-[#85A392] {$bg} rounded-xl p-4'>
-                <h3 class='text-[#333333] text-2xl mb-4'>{$title}</h3>
+            $bg = rand(0, 1) ? "bg-primary" : "";
+            $template = "<div class='card border-4 border-primary {$bg} rounded-xl p-4'>
+                <h3 class='text-text-gray text-2xl mb-4'>{$title}</h3>
                 <p class='mb-4'>{$excerpt}</p>
-                <a href='{$permalink}' class='bg-[#FDD998] px-3 py-1 rounded-md'>Citaj dalej</a>
+                <a href='{$permalink}' class='bg-secondary px-3 py-1 rounded-md'>Citaj dalej</a>
             </div>";
             if ($i%2==0) {
                 $left .= $template;

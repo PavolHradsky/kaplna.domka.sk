@@ -9,10 +9,10 @@
                 ?>
 
                 <div class="post-container p-3">
-                    <h2 class="text-[#333333] text-5xl mb-3"><?php the_title(); ?></h2>
+                    <h2 class="text-text-gray text-5xl mb-3"><?php the_title(); ?></h2>
                     <img class="rounded-lg" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_post_thumbnail_caption(); ?>">
-                    <p class="mb-4 text-[#333333]"><?php the_content( ); ?></p>
-                    <a class="text-[#F5B971] hover:text-[#85A392]" href='<?php the_author_url(); ?>'><?php the_author(); ?></a>
+                    <p class="mb-4 text-text-gray"><?php the_content( ); ?></p>
+                    <a class="text-secondary-hover hover:text-primary" href='<?php the_author_url(); ?>'><?php the_author(); ?></a>
                     <p><?php the_date(); ?></p>
                 </div>
                 
