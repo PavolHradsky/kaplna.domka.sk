@@ -1,0 +1,67 @@
+article > *:not(.entry-content),
+.entry-content > * {
+    @apply mx-auto max-w-content;
+}
+
+.entry-content, .block-editor-block-list__layout {
+    h1 {
+        @apply text-2xl;
+    }
+
+    h2 {
+        @apply text-xl;
+    }
+
+    h3 {
+        @apply text-lg;
+    }
+
+    p, ul, ol {
+        a {
+            @apply text-blue-500 underline;
+
+            &:hover {
+                @apply no-underline;
+            }
+        }
+
+        @apply mb-8;
+    }
+
+    ul:not(.block-editor-block-variation-picker__variations) {
+        li {
+            @apply list-disc list-inside;
+        }
+    }
+
+    ol {
+        li {
+            @apply list-decimal list-inside;
+        }
+    }
+}
+
+
+.item.active {
+    /* @apply grow bg-gradient-to-b from-half-black-transparent via-transparent; */
+    @apply grow h-[40rem] md:h-auto bg-gradient-to-b from-half-black-transparent via-transparent;
+}
+.item.inactive {
+    @apply w-full h-24 md:h-auto md:w-24 cursor-pointer;
+    /* @apply h-24 md:h-auto cursor-pointer; */
+}
+.item.active .inner-content {
+    @apply flex;
+}
+.item.inactive .inner-content {
+    @apply hidden;
+}
+.item.inactive .wrapper {
+    @apply h-full w-full bg-half-white-transparent;
+}
+.item.active .title {
+    @apply text-white py-10 mb-20 md:mb-0;
+}
+.item.inactive .title {
+    @apply md:rotate-90 md:translate-x-1/2 md:whitespace-nowrap;
+}

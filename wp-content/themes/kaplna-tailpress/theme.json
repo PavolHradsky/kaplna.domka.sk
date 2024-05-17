@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "settings": {
+    "layout": {
+      "contentSize": "960px",
+      "wideSize": "1280px"
+    },
+    "color": {
+      "palette": [
+        {
+          "name": "Primary",
+          "slug": "primary",
+          "color": "#85A392"
+        },
+        {
+          "name": "Secondary",
+          "slug": "secondary",
+          "color": "#FDD998"
+        },
+        {
+          "name": "Secondary hover",
+          "slug": "secondary-hover",
+          "color": "#F5B971"
+        },
+        {
+          "name": "Text gray",
+          "slug": "text-gray",
+          "color": "#333333"
+        },
+        {
+          "name": "Half white transparent",
+          "slug": "half-white-transparent",
+          "color": "rgba(255, 255, 255, 0.5)"
+        },
+        {
+          "name": "Half black transparent",
+          "slug": "half-black-transparent",
+          "color": "rgba(0, 0, 0, 0.5)"
+        }
+      ]
+    },
+    "typography": {
+      "fontSizes": [
+        {
+          "name": "Small",
+          "slug": "small",
+          "size": "0.875rem"
+        },
+        {
+          "slug": "regular",
+          "name": "Regular",
+          "size": "1.5rem"
+        },
+        {
+          "slug": "large",
+          "name": "Large",
+          "size": "1.125rem"
+        },
+        {
+          "slug": "xl",
+          "name": "XL",
+          "size": "1.25rem"
+        },
+        {
+          "slug": "xxl",
+          "name": "2XL",
+          "size": "1.5rem"
+        },
+        {
+          "slug": "xxxl",
+          "name": "3XL",
+          "size": "1.875rem"
+        }
+      ]
+    }
+  }
+}
