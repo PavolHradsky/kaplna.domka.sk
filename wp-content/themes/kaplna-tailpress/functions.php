@@ -107,3 +107,50 @@ function tailpress_nav_menu_add_submenu_class( $classes, $args, $depth ) {
 }
 
 add_filter( 'nav_menu_submenu_css_class', 'tailpress_nav_menu_add_submenu_class', 10, 3 );
+
+
+function tailpress_get_news_endpoint() {
+	register_rest_route(
+		'wp/v2',
+		'/news',
+		array(
+			'methods'  => 'GET',
+			'callback' => 'tailpress_get_news',
+		)
+	);
+}
+add_action( 'rest_api_init', 'tailpress_get_news_endpoint' );
+
+function tailpress_get_news() {
+    $page = 1;
+    if( isset($_GET["page"]) ){
+        $page = $_GET["page"];
+    }
+
+    $args = array('category__not_in' => get_category_by_slug("oznamy")->term_id, 'posts_per_page' => 10, 'paged' => $page);
+    $posts = get_posts( $args );
+    $left = "";
+    $right = "";
+    $mobile = "";
+    $i = 0;
+    foreach ($posts as $post) {
+        $title = get_the_title($post->ID);
+        $excerpt = get_the_excerpt($post->ID);
+        $permalink = get_the_permalink($post->ID);
+        $border = rand(0, 1) ? "border-4" : "";
+        $template = "<div class='card {$border} border-primary p-4'>
+            <h3 class='text-text-gray text-2xl mb-4'>{$title}</h3>
+            <p class='mb-4'>{$excerpt}</p>
+            <a href='{$permalink}' class='bg-primary hover:bg-primary-hover px-3 py-1 rounded-full'>Čítaj ďalej</a>
+        </div>";
+        if ($i%2==0) {
+            $left .= $template;
+        } else {
+            $right .= $template;
+        }
+        $mobile .= $template;
+        $i++;
+    }
+
+    return json_encode(array("left" => $left, "right" => $right, "mobile" => $mobile, "isall" => false));
+}
