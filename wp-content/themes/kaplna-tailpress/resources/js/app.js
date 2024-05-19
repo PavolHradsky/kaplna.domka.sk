@@ -12,12 +12,12 @@ window.addEventListener('load', async function () {
 
 
     let page = 1;
-    let left = document.querySelector("#left");
-    let right = document.querySelector("#right");
-    let mobile = document.querySelector("#mobile");
     let moreButton = document.querySelector("#more");
-
+    
     moreButton.addEventListener('click', async () => {
+        let left = document.querySelector("#left");
+        let right = document.querySelector("#right");
+        let mobile = document.querySelector("#mobile");
         page++;
         const response = await fetch("/wp-json/wp/v2/news?page=" + page);
         let data = await response.json();

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<h1 class="text-4xl text-center p-2 my-8">Detske Stretka</h1>
+<h1 class="text-4xl text-center p-2 my-8">Detské Stretká</h1>
 <div class="male-stretka content w-full md:h-full md:min-h-[80vh] flex flex-col md:flex-row gap-1">
     
 
@@ -18,7 +18,7 @@
                 </div>
                 <div class="inner-content flex-col gap-6 items-center bg-half-white-transparent w-full p-6 text-center">
                     <p class="md:max-w-[20rem] lg:max-w-[30rem] xl:max-w-[40rem]"><?php echo get_the_excerpt(); ?></p>
-                    <a href="<?php the_permalink(); ?>" class="bg-secondary px-3 py-1 rounded-md">Citaj dalej</a>
+                    <a href="<?php the_permalink(); ?>" class="bg-primary hover:bg-primary-hover px-3 py-1 rounded-full">Čítaj ďalej</a>
                 </div>
             </div>
 
@@ -28,7 +28,7 @@
 
 </div>
 
-<h1 class="text-4xl text-center p-2 my-8">Animatorske Stretka</h1>
+<h1 class="text-4xl text-center p-2 my-8">Animátorske Stretká</h1>
 <div class="velke-stretka content w-full md:h-full md:min-h-[80vh] flex flex-col md:flex-row gap-1">
     
 
@@ -46,7 +46,7 @@
                 </div>
                 <div class="inner-content flex-col gap-6 items-center bg-half-white-transparent w-full p-6 text-center">
                     <p class="md:max-w-[20rem] lg:max-w-[30rem] xl:max-w-[40rem]"><?php echo get_the_excerpt(); ?></p>
-                    <a href="<?php the_permalink(); ?>" class="bg-secondary px-3 py-1 rounded-md">Citaj dalej</a>
+                    <a href="<?php the_permalink(); ?>" class="bg-primary hover:bg-primary-hover px-3 py-1 rounded-full">Čítaj ďalej</a>
                 </div>
             </div>
 
@@ -74,7 +74,7 @@
                 </div>
                 <div class="inner-content flex-col gap-6 items-center bg-half-white-transparent w-full p-6 text-center">
                     <p class="md:max-w-[20rem] lg:max-w-[30rem] xl:max-w-[40rem]"><?php echo get_the_excerpt(); ?></p>
-                    <a href="<?php the_permalink(); ?>" class="bg-secondary px-3 py-1 rounded-md">Citaj dalej</a>
+                    <a href="<?php the_permalink(); ?>" class="bg-primary hover:bg-primary-hover px-3 py-1 rounded-full">Čítaj ďalej</a>
                 </div>
             </div>
 

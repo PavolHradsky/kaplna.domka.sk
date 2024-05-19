@@ -10,7 +10,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'bg-white text-gray-900 antialiased font-eczar relative pb-40' ); ?>>
+<body <?php body_class( 'bg-white text-gray-900 antialiased font-eczar relative pb-64 sm:pb-80' ); ?>>
 
 <?php do_action( 'tailpress_site_before' ); ?>
 
@@ -26,7 +26,7 @@
                 <div class="line h-0.5 w-8 bg-text-gray rounded-full"></div>
                 <div class="line h-0.5 w-8 bg-text-gray rounded-full"></div>
             </div>
-            <h3 class="text-text-gray text-xl text-center grow">„S každým sa zhováraj tak, aby si sa stal jeho priateľom.“<span class="text-sm">don&#160Bosco</span></h3>
+            <h3 class="text-text-gray hidden 2xs:block text-xl text-center grow">„S každým sa zhováraj tak, aby si sa stal jeho priateľom.“<span class="text-sm">don&#160Bosco</span></h3>
             <?php if ( function_exists( 'the_custom_logo' ) ) {
                 ?>
                 <a class="h-14 aspect-square drop-shadow-lg" href="<?php echo get_home_url() ?>"> <img src="<?php echo esc_url( wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' )[0] ); ?>" alt="logo"> </a>

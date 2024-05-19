@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="content flex w-full justify-center">
-<img class="left-img w-24 xl:w-[14%] 2xl:w-1/5 h-screen fixed object-cover left-0 -z-10" src="<?php echo wp_get_attachment_url( get_post_meta(get_page_by_path("news")->ID)["img-left"][0] ); ?>"></img>
-<img class="right-img w-24 xl:w-[14%] 2xl:w-1/5 h-screen fixed object-cover right-0 -z-10 hidden md:block" src="<?php echo wp_get_attachment_url( get_post_meta(get_page_by_path("news")->ID)["img-right"][0] ); ?>"></img>
+<img class="left-img w-12 2xs:w-24 xl:w-[14%] 2xl:w-1/5 h-screen fixed object-cover left-0 -z-10" src="<?php echo wp_get_attachment_url( get_post_meta(get_page_by_path("gallery")->ID)["img-left"][0] ); ?>"></img>
+<img class="right-img w-12 2xs:w-24 xl:w-[14%] 2xl:w-1/5 h-screen fixed object-cover right-0 -z-10 hidden md:block" src="<?php echo wp_get_attachment_url( get_post_meta(get_page_by_path("gallery")->ID)["img-right"][0] ); ?>"></img>
 
 <div class="overlay w-full h-full fixed hidden bg-half-black-transparent z-30 flex justify-center top-0 ">
     <div class="content w-5/6 max-w-2xl mt-3 ">
@@ -17,7 +17,7 @@
                 <div class="w-10 h-1 rounded-sm bg-white -rotate-45 origin-left"></div>
                 <div class="w-10 h-1 rounded-sm bg-white rotate-45 origin-left mt-[-0.3rem] "></div>
             </div>
-            <img class="w-10/12" id="main-img" src="<?php echo wp_get_attachment_image_url(157) ?>" alt="">
+            <img class="w-10/12" id="main-img" src="<?php echo get_template_directory_uri(); ?>/resources/imgs/placeholder-image.png" alt="placeholder">
             <div class="next flex flex-col justify-center h-20 cursor-pointer w-1/12">
                 <div class="w-10 h-1 rounded-sm bg-white -rotate-45 origin-right mb-[-0.2rem]"></div>
                 <div class="w-10 h-1 rounded-sm bg-white rotate-45 origin-right"></div>
@@ -29,10 +29,11 @@
 </div>
 
 
-    <div class="inner-content max-w-4xl ml-24 md:mx-24 p-4 flex flex-col items-center">
-        <h1 class="text-center text-4xl p-2 my-2 bg-secondary w-full py-6"><?php the_title(""); ?></h1>
+    <div class="inner-content max-w-4xl ml-12 2xs:ml-24 md:mx-24 p-4 flex flex-col items-center">
+    <h2 class="text-center text-4xl p-2 my-2w-full py-6"><?php the_title(""); ?></h2>
+        <div class="divider mx-auto h-[1px] w-4/5 bg-text-gray mb-4"></div>
 
-        <div class="gallery grid grid-cols-3 gap-2">
+        <div class="gallery grid md:grid-cols-3 gap-2">
             <?php
             use FileBird\Classes\Tree;
             use FileBird\Classes\Helpers as Helpers;
@@ -92,7 +93,7 @@
             if(overlay.classList.contains("hidden")) {
                 overlay.classList.remove("hidden")
 
-                let response = await fetch(`https://kaplna.domka.local/wp-json/filebird/public/v1/attachment-id/?folder_id=${itemId}`, {
+                let response = await fetch(`/wp-json/filebird/public/v1/attachment-id/?folder_id=${itemId}`, {
                     method: "GET",
                     withCredentials: true,
                     headers: {
@@ -115,7 +116,7 @@
                     thumbnails.appendChild(tmpImg)
                 })
 
-                response = await fetch(`https://kaplna.domka.local/wp-json/wp/v2/media/${imagesIds[counter]}`)
+                response = await fetch(`/wp-json/wp/v2/media/${imagesIds[counter]}`)
                 data = await response.json() 
                 mainImg.src = data.source_url
 
@@ -129,7 +130,7 @@
                     } else {
                         img = thumbnails.childNodes[myI]
                     }
-                    response = await fetch(`https://kaplna.domka.local/wp-json/wp/v2/media/${imageId}`)
+                    response = await fetch(`/wp-json/wp/v2/media/${imageId}`)
                     data = await response.json() 
                     img.src = data.source_url
                     imagesUrls[myI] = data.source_url
