@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php define("FULL_WIDTH", true); ?>
 
 <h1 class="text-4xl text-center p-2 my-8">Detské Stretká</h1>
 <div class="male-stretka content w-full md:h-full md:min-h-[80vh] flex flex-col md:flex-row gap-1">

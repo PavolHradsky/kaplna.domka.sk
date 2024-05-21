@@ -65,3 +65,7 @@ article > *:not(.entry-content),
 .item.inactive .title {
     @apply md:rotate-90 md:translate-x-1/2 md:whitespace-nowrap;
 }
+
+.card {
+    overflow-wrap: anywhere;
+}

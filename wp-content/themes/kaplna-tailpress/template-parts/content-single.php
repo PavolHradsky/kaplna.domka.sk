@@ -6,7 +6,7 @@
 	</header>
 
 	<div class="entry-content">
-        <img class="rounded-lg mb-4" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_post_thumbnail_caption(); ?>">
+        <img class="rounded-lg mb-4 w-full" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_post_thumbnail_caption(); ?>">
 		<?php the_content(); ?>
         <?php the_author(); ?>
 

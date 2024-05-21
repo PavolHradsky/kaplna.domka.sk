@@ -44,7 +44,7 @@
                 if( $i < $count-2 ) {
                     echo '<a href="' . $item->url . '"><li class="text-text-gray px-3 rounded-lg hover:text-secondary-hover max-w-xl">' . $item->title . '</li></a>';
                 } else {
-                    echo '<a href="' . $item->url . '"><li class="bg-secondary text-[#DF3636] text-center mx-6 px-3 rounded-lg hover:bg-secondary-hover max-w-xl">' . $item->title . '</li></a>';
+                    echo '<a href="' . $item->url . '"><li class="bg-secondary text-primary text-center mx-6 px-3 rounded-lg hover:bg-secondary-hover max-w-xl">' . $item->title . '</li></a>';
                 }
                 $i++;
             }

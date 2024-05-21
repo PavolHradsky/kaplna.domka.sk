@@ -30,7 +30,7 @@
 
 
     <div class="inner-content max-w-4xl ml-12 2xs:ml-24 md:mx-24 p-4 flex flex-col items-center">
-    <h2 class="text-center text-4xl p-2 my-2w-full py-6"><?php the_title(""); ?></h2>
+    <h2 class="text-center text-4xl p-2 my-2 w-full py-6"><?php the_title(""); ?></h2>
         <div class="divider mx-auto h-[1px] w-4/5 bg-text-gray mb-4"></div>
 
         <div class="gallery grid md:grid-cols-3 gap-2">
@@ -97,7 +97,7 @@
                     method: "GET",
                     withCredentials: true,
                     headers: {
-                        "Authorization": "Bearer lHUQL3JN9lDRpe7mcnu84F74QM0VK3vLkkFzxvkR",
+                        "Authorization": "Bearer Nw8x6fiwoqo1S5G5qnR3vuXKyoONjImXDqqp1Wsw",
                         "Content-Type": "application/json"
                     }
                 })
