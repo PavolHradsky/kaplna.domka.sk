@@ -9,37 +9,37 @@
         <div class="divider mx-auto h-[1px] w-4/5 bg-text-gray mb-4"></div>
         
         <div class="flex gap-4 items-center mb-4">
-            <a class='bg-primary hover:bg-primary-hover px-3 py-1 rounded-full' href='#'>Domka</a>
-            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+            <a class='bg-primary hover:bg-primary-hover px-3 py-1 rounded-full' href='https://www.facebook.com/kaplna.mladych'>link</a>
+            <span>Facebook Kaplna</span>
         </div>
         <div class="flex flex-row-reverse gap-4 items-center mb-4">
-            <a class='bg-primary hover:bg-primary-hover px-3 py-1 rounded-full' href='#'>Domka</a>
-            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+            <a class='bg-primary hover:bg-primary-hover px-3 py-1 rounded-full' href='https://www.instagram.com/kaplna_mladych/'>link</a>
+            <span>Instagram Kaplna</span>
         </div>
         <div class="flex gap-4 items-center mb-4">
-            <a class='bg-primary hover:bg-primary-hover px-3 py-1 rounded-full' href='#'>Domka</a>
-            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+            <a class='bg-primary hover:bg-primary-hover px-3 py-1 rounded-full' href='https://www.youtube.com/@kaplnamladych5937'>link</a>
+            <span>Youtube Kaplna</span>
         </div>
         <div class="flex flex-row-reverse gap-4 items-center mb-4">
-            <a class='bg-primary hover:bg-primary-hover px-3 py-1 rounded-full' href='#'>Domka</a>
-            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+            <a class='bg-primary hover:bg-primary-hover px-3 py-1 rounded-full' href='https://www.facebook.com/zdruzenie.domka'>link</a>
+            <span>Facebook Domka</span>
         </div>
         <div class="flex gap-4 items-center mb-4">
+            <a class='bg-primary hover:bg-primary-hover px-3 py-1 rounded-full' href='https://www.domka.sk/'>link</a>
+            <span>Stránka Domky</span>
+        </div>
+        <div class="flex flex-row-reverse gap-4 items-center mb-4">
+            <a class='bg-primary hover:bg-primary-hover px-3 py-1 rounded-full' href='https://saleziani.sk/'>link</a>
+            <span>Stránka Saleziánov</span>
+        </div>
+<!--         <div class="flex gap-4 items-center mb-4">
             <a class='bg-primary hover:bg-primary-hover px-3 py-1 rounded-full' href='#'>Domka</a>
             <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
         </div>
         <div class="flex flex-row-reverse gap-4 items-center mb-4">
             <a class='bg-primary hover:bg-primary-hover px-3 py-1 rounded-full' href='#'>Domka</a>
             <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
-        </div>
-        <div class="flex gap-4 items-center mb-4">
-            <a class='bg-primary hover:bg-primary-hover px-3 py-1 rounded-full' href='#'>Domka</a>
-            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
-        </div>
-        <div class="flex flex-row-reverse gap-4 items-center mb-4">
-            <a class='bg-primary hover:bg-primary-hover px-3 py-1 rounded-full' href='#'>Domka</a>
-            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
-        </div>
+        </div> -->
         
     </div>
 
