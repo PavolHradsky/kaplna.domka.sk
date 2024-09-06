@@ -9,7 +9,7 @@
         
         <div class="calendar w-full overflow-x-scroll sm:overflow-auto">
             <?php if ( shortcode_exists( 'pretty_google_calendar' ))  {
-                echo do_shortcode("[pretty_google_calendar gcal='309e4e345050ef3e2b21fc6583b1d19a2fc10a29f8c5f8d4b12a1dbb4f2021a0@group.calendar.google.com']");
+                echo do_shortcode("[pretty_google_calendar gcal='de734m5nif6ofdq5r17noimjn0@group.calendar.google.com' locale='sk']");
             } ?>
         </div>
 
